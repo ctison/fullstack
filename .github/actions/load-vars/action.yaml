@@ -1,0 +1,20 @@
+name: Load variables
+
+description: |
+  Load variables from (in higher precedence order)
+  - Workflow dispatch inputs
+  - Pull request's body
+  - Last commit's message body
+
+inputs:
+  vars:
+    required: false
+    default: ''
+    description: Variables with highest precedence
+
+# Outputs are dynamically named
+outputs: {}
+
+runs:
+  using: node16
+  main: index.mjs

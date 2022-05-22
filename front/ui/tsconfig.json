@@ -1,0 +1,4 @@
+{
+  "extends": "@shui/config/tsconfig.vite.json",
+  "exclude": ["dist"]
+}

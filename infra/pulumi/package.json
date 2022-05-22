@@ -1,0 +1,12 @@
+{
+  "name": "@shui/pulumi",
+  "devDependencies": {
+    "@types/node": "16.11.35",
+    "typescript": "4.6.4"
+  },
+  "dependencies": {
+    "@pulumi/pulumi": "3.32.1",
+    "@pulumi/kubernetes": "3.19.0",
+    "@pulumi/kubernetesx": "0.1.6"
+  }
+}

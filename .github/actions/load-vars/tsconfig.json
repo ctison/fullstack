@@ -1,0 +1,3 @@
+{
+  "extends": "@shui/config/tsconfig.json"
+}

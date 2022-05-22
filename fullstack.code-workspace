@@ -1,0 +1,171 @@
+{
+  "folders": [
+    {
+      "name": "⭐️",
+      "path": "."
+    },
+    {
+      "name": "🍑  UI",
+      "path": "front/ui"
+    },
+    {
+      "name": "⚡️  Next.js",
+      "path": "front/nextjs"
+    },
+    {
+      "name": "⚡️  Remix",
+      "path": "front/remix"
+    },
+    {
+      "name": "⚡️  Electron",
+      "path": "front/electron"
+    },
+    {
+      "name": "⚡️  Tauri",
+      "path": "front/tauri"
+    },
+    {
+      "name": "🦕  Back Deno",
+      "path": "back/deno"
+    },
+    {
+      "name": "🐹  Back Go",
+      "path": "back/go"
+    },
+    {
+      "name": "🦀  Back Rust",
+      "path": "back/rust"
+    },
+    {
+      "name": "👑  Back Nim",
+      "path": "back/nim"
+    },
+    {
+      "name": "🧲  Infra Pulumi",
+      "path": "infra/pulumi"
+    },
+    {
+      "name": "🎭  Playwright",
+      "path": "qa/playwright"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      // cSpell:disable
+      "bradlc.vscode-tailwindcss",
+      "bufbuild.vscode-buf",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "foxundermoon.shell-format",
+      "GraphQL.vscode-graphql",
+      "Prisma.prisma",
+      "timonwong.shellcheck",
+      "zxh404.vscode-proto3"
+      // cSpell:enable
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "presentation": {
+      "panel": "dedicated",
+      "revealProblems": "onProblem",
+      "showReuseMessage": false,
+      "close": false
+    },
+    "problemMatcher": {
+      "owner": "vite",
+      "background": {
+        "activeOnStart": true,
+        "beginsPattern": "build started...",
+        "endsPattern": "built in \\d+ms"
+      },
+      "pattern": {
+        "regexp": "^\\[vite:.+$",
+        "file": 1,
+        "line": 2,
+        "column": 3,
+        "message": 4
+      },
+      "severity": "error"
+    },
+    "tasks": [
+      {
+        "label": "Dev UI",
+        "type": "shell",
+        "command": "rushx dev",
+        "group": "build",
+        "isBackground": true,
+        "options": {
+          "cwd": "${workspaceFolder}/libs/ui"
+        }
+      },
+      {
+        "label": "Dev Electron",
+        "dependsOn": ["Dev UI"],
+        "type": "shell",
+        "command": "rushx dev",
+        "group": "build",
+        "isBackground": true,
+        "options": {
+          "cwd": "${workspaceFolder}/front/electron"
+        }
+      },
+      {
+        "label": "Dev Next.js",
+        "dependsOn": ["Dev UI"],
+        "type": "shell",
+        "command": "rushx dev",
+        "group": "build",
+        "isBackground": true,
+        "options": {
+          "cwd": "${workspaceFolder}/front/nextjs"
+        }
+      },
+      {
+        "label": "Dev Remix",
+        "dependsOn": ["Dev UI"],
+        "type": "shell",
+        "command": "rushx dev",
+        "group": "build",
+        "isBackground": true,
+        "options": {
+          "cwd": "${workspaceFolder}/front/remix"
+        }
+      }
+    ]
+  },
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "settings": {
+    "[js][jsx][ts][tsx][vue][css][less][scss][sass][graphql][gql][md][mdx][yaml][json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[shellscript]": {
+      "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "css.lint.unknownAtRules": "ignore",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "files.associations": {
+      "**/*.json": "jsonc",
+      "**/package.json": "json"
+    },
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "frontMatter.content.publicFolder": "public",
+    "frontMatter.framework.id": "next",
+    "frontMatter.preview.host": "http://localhost:3000",
+    "search.exclude": {
+      "**/pnpm-lock.yaml": true
+    },
+    "typescript.tsdk": "common/temp/node_modules/typescript/lib",
+    "deno.enablePaths": ["./back/deno"],
+    "deno.lint": true,
+    "deno.unstable": true
+  }
+}

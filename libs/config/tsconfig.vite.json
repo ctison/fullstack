@@ -1,0 +1,8 @@
+{
+  // https://vitejs.dev/guide/features.html#typescript-compiler-options
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": true,
+    "useDefineForClassFields": true
+  }
+}

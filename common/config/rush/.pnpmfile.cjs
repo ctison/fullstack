@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * When using the PNPM package manager, you can use pnpmfile.js to workaround
@@ -14,9 +14,9 @@
  */
 module.exports = {
   hooks: {
-    readPackage
-  }
-};
+    readPackage,
+  },
+}
 
 /**
  * This hook is invoked during installation before a package's dependencies
@@ -27,12 +27,19 @@ module.exports = {
  * The return value is the updated object.
  */
 function readPackage(packageJson, context) {
-
   // // The karma types have a missing dependency on typings from the log4js package.
   // if (packageJson.name === '@types/karma') {
   //  context.log('Fixed up dependencies for @types/karma');
   //  packageJson.dependencies['log4js'] = '0.6.38';
   // }
 
-  return packageJson;
+  if (packageJson.peerDependencies?.['react']) {
+    packageJson.peerDependencies['react'] = '18'
+  }
+
+  if (packageJson.peerDependencies?.['react-dom']) {
+    packageJson.peerDependencies['react-dom'] = '18'
+  }
+
+  return packageJson
 }

@@ -1,0 +1,12 @@
+apiVersion: policy.jspolicy.com/v1beta1
+kind: JsPolicy
+metadata:
+  name: print.shui.io
+spec:
+  type: Validating
+  operations: [CREATE, UPDATE]
+  resources: [pods]
+  violationPolicy: warn
+  failurePolicy: Ignore
+  auditPolicy: Skip
+  timeoutSeconds: 5

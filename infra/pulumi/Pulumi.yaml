@@ -1,0 +1,7 @@
+name: infra
+runtime: nodejs
+main: src/index.ts
+backend:
+  url: file://state
+options:
+  refresh: always

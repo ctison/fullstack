@@ -1,0 +1,15 @@
+node_modules/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+/common/temp/
+/common/scripts/
+
+/front/*/build/
+/libs/*/build/
+
+/front/*/dist/
+/libs/*/dist/
+
+/front/remix/public/build/
+/front/electron/release/
+/front/tauri/src-tauri/target/

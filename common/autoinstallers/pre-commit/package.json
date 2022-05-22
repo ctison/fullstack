@@ -1,0 +1,11 @@
+{
+  "name": "pre-commit",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "lint-staged": "12.3.8",
+    "@microsoft/rush-lib": "5.66.2",
+    "prettier": "2.6.2",
+    "sort-package-json": "1.55.0"
+  }
+}

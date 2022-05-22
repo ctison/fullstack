@@ -1,0 +1,17 @@
+version: "0.2"
+ignorePaths: []
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - kubernetes
+  - msedge
+  - nextjs
+  - pnpm
+  - Pulumi
+  - rushx
+  - shui
+  - Tauri
+  - viewports
+  - vite
+ignoreWords: []
+import: []

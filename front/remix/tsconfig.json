@@ -1,0 +1,13 @@
+{
+  "extends": "@shui/config/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2019",
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "types": ["vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["app/*"]
+    }
+  },
+  "include": ["remix.env.d.ts", "app/**/*"]
+}

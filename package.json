@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "lint-staged": {
+    "package.json": "sort-package-json",
+    "*.{js,jsx,ts,tsx,json,gql,md,yaml,yml,html,css}": "prettier --write",
+    "!*.{js,jsx,ts,tsx,json,gql,md,yaml,yml,html,css}": "sh ./common/autoinstallers/pre-commit/bin/add-final-end-of-line.sh",
+    "*.{js,jsx,ts,tsx}": "node ./common/autoinstallers/pre-commit/bin/eslint.js"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "jsxSingleQuote": true,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "renovate": {
+    "extends": [
+      "github>ctison/renovate"
+    ],
+    "automerge": false
+  }
+}

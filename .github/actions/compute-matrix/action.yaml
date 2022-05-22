@@ -1,0 +1,7 @@
+name: Compute matrix of jobs to run
+
+description: Compute a matrix of Github Actions jobs to run
+
+runs:
+  using: node16
+  main: index.mjs

@@ -1,0 +1,48 @@
+// {
+//   "version": "2.0.0",
+//   "presentation": {
+//     "panel": "dedicated",
+//     "revealProblems": "onProblem",
+//     "showReuseMessage": false,
+//     "close": false
+//   },
+//   "problemMatcher": {
+//     "owner": "vite",
+//     "background": {
+//       "activeOnStart": true,
+//       "beginsPattern": "build started...",
+//       "endsPattern": "built in \\d+ms"
+//     },
+//     "pattern": {
+//       "regexp": "^\\[vite:.+$",
+//       "file": 1,
+//       "line": 2,
+//       "column": 3,
+//       "message": 4
+//     },
+//     "severity": "error"
+//   },
+//   "tasks": [
+//     {
+//       "label": "Dev UI",
+//       "type": "shell",
+//       "command": "rushx dev",
+//       "group": "build",
+//       "isBackground": true,
+//       "options": {
+//         "cwd": "${workspaceFolder}/libs/ui"
+//       }
+//     },
+//     {
+//       "label": "Dev Electron",
+//       "dependsOn": ["Dev UI"],
+//       "type": "shell",
+//       "command": "rushx dev",
+//       "group": "build",
+//       "isBackground": true,
+//       "options": {
+//         "cwd": "${workspaceFolder}/front/electron"
+//       }
+//     }
+//   ]
+// }

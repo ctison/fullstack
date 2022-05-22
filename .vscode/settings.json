@@ -1,0 +1,30 @@
+// {
+//   "[js][jsx][ts][tsx][vue][css][less][scss][sass][graphql][gql][md][mdx][yaml][json]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "[shellscript]": {
+//     "editor.defaultFormatter": "foxundermoon.shell-format"
+//   },
+//   "css.lint.unknownAtRules": "ignore",
+//   "editor.codeActionsOnSave": {
+//     "source.fixAll.eslint": true
+//   },
+//   "editor.formatOnSave": true,
+//   "editor.tabSize": 2,
+//   "files.associations": {
+//     "**/*.json": "jsonc",
+//     "**/package.json": "json"
+//   },
+//   "files.eol": "\n",
+//   "files.insertFinalNewline": true,
+//   "frontMatter.content.publicFolder": "public",
+//   "frontMatter.framework.id": "next",
+//   "frontMatter.preview.host": "http://localhost:3000",
+//   "search.exclude": {
+//     "**/pnpm-lock.yaml": true
+//   },
+//   "typescript.tsdk": "common/temp/node_modules/typescript/lib",
+//   "deno.enablePaths": ["./back/deno"],
+//   "deno.lint": true,
+//   "deno.unstable": true
+// }

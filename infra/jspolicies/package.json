@@ -1,0 +1,7 @@
+{
+  "name": "@shui/jspolicies",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@jspolicy/types": "0.0.4"
+  }
+}
